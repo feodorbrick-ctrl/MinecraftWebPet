@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.whiteElement {
+    color: white;
+}
+
+.greenContent {
+    color: #4CAF50;
+}
+
+.elementBorder {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    display: block;
+    margin: 20px;
+    width: 800px;
+    position: relative;
+    left: 25%;
+    justify-content: center;
+}
+
+.elementBorderFunFackt {
+    background-color: white;
+    position: relative;
+    left: 25%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    display: block;
+    margin: 20px;
+    width: 800px;
+}
+
+.funtext {
+    background-color: lightcyan;
+    display: none;
+    border-radius: 5px;
+    margin: 20px;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    bottom: 20px;
+}
+
+.head {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 2em;
+}
+
+.text_position {
+    position: relative;
+    left: 35%;
+}
+
+.website {
+    font-family: Arial, sans-serif;
+}
+
+.textPositionInElementBorder {
+    margin: 10px;
+}
+
+.Button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.Button:hover {
+    background-color: #45a049;
+}
+
+#parentHader,
+#Hader {
+    position: relative;
+    left: auto;
+}
+
+#languageSelect {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+}
+
+.img {
+    box-sizing: border-box;
+    border: darkgrey 5px groove;
+    position: absolute;
+    top: 5%;
+    left: 86%;
+    display: none;
+    width: 2.5cm;
+    height: 2cm;
+}
+
+.a {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
