@@ -1,0 +1,61 @@
+<!doctype html>
+<meta charset="UTF-8">
+<html lang="en">
+<head>
+    <title>A minecraft</title>
+    <link rel="stylesheet" href="style%20minecraft.css">
+    <link rel="icon" href="/img/command.png.webp">
+</head>
+<body>
+<script src="index.js"></script>
+<!--header-->
+<div class="head">
+    <h0 class="a">Attention!</h0>
+    <p class="a">These website is not offical!!!</p>
+    <select id="languageSelect" onchange="reLange()">
+        <option value="en">English <img src="/img/poland.gif"/></option>
+        <option value="rus">russia<img src="/img/russia.gif"/></option>
+        <option value="pl">Polska<img src="/img/u.s.gif"/></option>
+    </select>
+    <h1 class="text_position" id="parentHader">Welcome to Minecraft!</h1>
+    <p class="text_position" id="Hader">
+        Your adventure awaits in a blocky, pixelated world!
+        About Minecraft
+    </p>
+</div>
+<!--website-->
+<div id="AboutMinecraft" class="website">
+    <div class="elementBorder">
+        <h1 class="greenContent" id='1'>About Minecraft</h1>
+        <p class="textPositionInElementBorder" id="textMinekraft1">
+            Minecraft is a sandbox video game developed by Mojang Studios,
+            first released in 2011. Players explore a blocky, procedurally generated 3D world, gathering resources,
+            building structures, and surviving against monsters.
+            Minecraft World
+            Key Features
+        </p>
+    </div>
+
+    <div id="KeyFeatures" class="elementBorder">
+        <h1 class="greenContent" id="2">Key Features </h1>
+        <ul class="text">
+            <li id="textMinekraft2"><strong>Creative Mode:</strong> Build anything with unlimited resources.</li>
+            <li id="textMinekraft3"><strong>Survival Mode:</strong> Gather resources, craft items, and fend off enemies.
+            </li>
+            <li id="textMinekraft4"><strong>Multiplayer:</strong> Play with friends on servers or local networks.</li>
+            <li id="textMinekraft5"><strong>Modding:</strong> Customize the game with community-created mods.</li>
+        </ul>
+    </div>
+
+    <div id="FunFact" class="elementBorderFunFackt">
+        <h1 class="greenContent" id="3">Fun Fact</h1>
+        <img src="/img/pig.jpg" alt="some error" class="img" id='creeperpig'>
+        <button class="textPositionInElementBorder Button whiteElement" onclick="funFact()" id="Show">Show fun Fact
+        </button>
+        <div id="funText" class="funtext">
+            <p>Did you know?The Creeper was created by accident due to a coding error when trying to design a pig!</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
