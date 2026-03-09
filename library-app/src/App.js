@@ -15,6 +15,12 @@ function App() {
         </div>
         <div className = 'header'>
             <MyHeader/>
+            {/*{publicRoutes.map(route => */}
+            {/*    <a href={route.path}>*/}
+            {/*        <img src={route.image} alt={route.path}/>*/}
+            {/*    </a>*/}
+            {/*)}*/}
+
         </div>
         <div className = 'rightPartBorder'/>
     </div>

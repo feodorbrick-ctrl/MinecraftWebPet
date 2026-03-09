@@ -15,5 +15,5 @@ import About from "../pages/About";
 export const privateRoutes = []
 
 export const publicRoutes = [
-    {path: '/', element: <About/>, exact: true}
+    {path: '/', element: <About/>, exact: true, image: './images/about.png'},
 ]

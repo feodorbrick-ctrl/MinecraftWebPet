@@ -1,8 +1,12 @@
 import React from 'react';
+import cl from './../styles/About.module.css'
 
 const About = () => {
     return (
-           <h1 style={{color: 'white'}}>q</h1>
+        <div className = {cl.divOfTextAbout}>
+            About <br/>
+            ... .
+        </div>
     );
 };
 
