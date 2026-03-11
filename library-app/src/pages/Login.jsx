@@ -14,14 +14,14 @@ const Login = () => {
     return (
         <div>
             <MyInput
-                plaseholder='userName'
+                placeholder='userName'
                 value={userData.userName}
                 onChange={(event) => {
                     setUserData({...userData, userName: event.target.value});
                 }}
             />
             <MyInput
-                plaseholder='pasworld'
+                placeholder='password'
                 value={userData.password}
                 onChange={(event) => {
                     setUserData({...userData, password: event.target.value});
