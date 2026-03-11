@@ -1,7 +1,7 @@
 import MyHeader from "./components/UI/Headers/MyHeader";
-import { Navigate, Route, Routes } from "react-router-dom";
+import {Link, Navigate, Route, Routes} from "react-router-dom";
 import {publicRoutes} from "./router/router";
-import './styles/App.css'
+import './styles/AppRouter.css'
 
 function App() {
   return (
@@ -11,16 +11,20 @@ function App() {
                 {publicRoutes.map(route =>
                     <Route path={route.path} element={route.element} key={route.path} />
                 )}
+                <Route path="*" element={<Navigate to='/' replace/>}/>
             </Routes>
         </div>
         <div className = 'header'>
-            <MyHeader/>
-            {/*{publicRoutes.map(route => */}
-            {/*    <a href={route.path}>*/}
-            {/*        <img src={route.image} alt={route.path}/>*/}
-            {/*    </a>*/}
-            {/*)}*/}
-
+            <div className='fieldLinks'>
+                <MyHeader/>
+                {publicRoutes.map(route =>
+                <div className='LinksButton' key={route.path}>
+                    <Link className='Links' to={route.path} key={route.path}>
+                        {route.name}
+                    </Link>
+                </div>
+            )}
+            </div>
         </div>
         <div className = 'rightPartBorder'/>
     </div>

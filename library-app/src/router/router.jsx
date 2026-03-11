@@ -11,9 +11,11 @@
 //     {path: '/about', component: <About/>, exact: true},
 // ]
 import About from "../pages/About";
+import Login from "../pages/Login";
 
 export const privateRoutes = []
 
 export const publicRoutes = [
-    {path: '/', element: <About/>, exact: true, image: './images/about.png'},
+    {path: '/', element: <About/>, exact: true, name: 'About'},
+    {path: '/login', element: <Login/>, exact: true, name: 'Login'},
 ]
