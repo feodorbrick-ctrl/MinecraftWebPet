@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import App from './App';
@@ -7,16 +7,21 @@ const Context = React.createContext(null);
 
 const ContextProvider = ({ children }) => {
     const [isUserLoggedIn, setUserLoggedIn] = React.useState(false);
-    const [allUsersName, setAllUsersName] = React.useState([]);
-    const [usersPassword, setUsersPassword] = React.useState([]);
+    const [userData, setUserData] = useState({
+        userName: '',
+        password: '',
+    });
+
+    let savedUsersPassword = []
+    let savedUsersNames = []
 
     const contextValue = {
         isUserLoggedIn,
         setUserLoggedIn,
-        allUsersName,
-        setAllUsersName,
-        usersPassword,
-        setUsersPassword,
+        savedUsersPassword,
+        savedUsersNames,
+        userData,
+        setUserData
     };
 
     return (

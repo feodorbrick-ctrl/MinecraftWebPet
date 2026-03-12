@@ -4,12 +4,7 @@ import MyButton from "../components/UI/MyButton/MyButton";
 import Context from "../index";
 
 const Login = () => {
-    const {setUserLoggedIn,} = useContext(Context);
-    const [userData, setUserData] = useState({
-        userName: '',
-        password: '',
-    });
-
+    let {setUserLoggedIn, savedUsersPassword, savedUsersNames, userData, setUserData} = useContext(Context);
 
     return (
         <div>
@@ -34,6 +29,9 @@ const Login = () => {
                     if (userData.userName && userData.password !== '') {
                         setUserLoggedIn(true)
                         console.log('user data', userData);
+                        savedUsersPassword.push(userData.password);
+                        savedUsersNames.push(userData.userName);
+                        console.log(savedUsersPassword, savedUsersNames);
                     }
                 }
             }

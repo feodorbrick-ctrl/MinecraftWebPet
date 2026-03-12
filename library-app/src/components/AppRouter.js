@@ -2,11 +2,12 @@ import MyHeader from "../components/UI/Headers/MyHeader";
 import {Link, Navigate, Route, Routes} from "react-router-dom";
 import {privateRoutes, publicRoutes} from "../router/router";
 import '../styles/AppRouter.css'
-import {useContext} from "react";
+import React, {useContext} from "react";
 import Context from "../index";
+import MyButton from "./UI/MyButton/MyButton";
 
 function AppRouter() {
-    const {isUserLoggedIn} = useContext(Context)
+    const {isUserLoggedIn, setUserLoggedIn} = useContext(Context)
 
     if (!isUserLoggedIn) {
         return (
@@ -55,6 +56,7 @@ function AppRouter() {
                                 </Link>
                             </div>
                         )}
+                        <MyButton btnName={'log out'} callback={ () => setUserLoggedIn(false)} />
                     </div>
                 </div>
                 <div className = 'rightPartBorder'/>
