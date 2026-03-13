@@ -11,6 +11,7 @@ const ContextProvider = ({ children }) => {
         userName: '',
         password: '',
     });
+    const [isBlueTheme, setIsBlueTheme] = useState(false);
 
     let savedUsersPassword = []
     let savedUsersNames = []
@@ -21,7 +22,9 @@ const ContextProvider = ({ children }) => {
         savedUsersPassword,
         savedUsersNames,
         userData,
-        setUserData
+        setUserData,
+        isBlueTheme,
+        setIsBlueTheme,
     };
 
     return (
