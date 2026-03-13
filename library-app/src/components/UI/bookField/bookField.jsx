@@ -1,10 +1,15 @@
 import React from 'react';
 import cl from './BookField.module.css'
 
-const BookField = ({nameBook}) => {
+const BookField = ({nameBook, descriptionBook}) => {
+
     return (
         <div className={cl.bookField}>
-            {nameBook}
+            <div className={cl.bookTittle} key={nameBook}>
+                {nameBook}
+            </div>
+            <br/>
+            <span color={'lightBlue'}>{descriptionBook}</span>
         </div>
     );
 };

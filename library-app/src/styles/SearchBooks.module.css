@@ -1,3 +1,6 @@
-.listOfBooks {
-    display: block;
+.backgroundListOfBooks {
+    height: fit-content;
+    background: #000000;
+    width: 100%;
+    margin-bottom: 77px;
 }
