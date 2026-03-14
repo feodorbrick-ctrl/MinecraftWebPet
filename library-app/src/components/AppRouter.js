@@ -64,7 +64,10 @@ function AppRouter() {
                             visible = {isVisibleLogOutModal}
                             children = {[
                                 <p key='Are you sure to log out'>Are you sure to log out</p>,
-                                <MyButton key={'Yes I`m sure'} btnName={'Yes I`m sure'} callback={ () => setUserLoggedIn(false)} />
+                                <MyButton key={'Yes I`m sure'} btnName={'Yes I`m sure'} callback={ () => {
+                                    setUserLoggedIn(false)
+                                    setVisibleLogOutModal(false)
+                                }} />
                             ]}
                         />
                     </div>

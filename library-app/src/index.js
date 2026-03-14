@@ -6,12 +6,11 @@ import App from './App';
 const Context = React.createContext(null);
 
 const ContextProvider = ({ children }) => {
-    const [isUserLoggedIn, setUserLoggedIn] = React.useState(false);
+    const [isUserLoggedIn, setUserLoggedIn] = React.useState(true);
     const [userData, setUserData] = useState({
         userName: '',
         password: '',
     });
-    const [isBlueTheme, setIsBlueTheme] = useState(false);
 
     let savedUsersPassword = []
     let savedUsersNames = []
@@ -23,8 +22,6 @@ const ContextProvider = ({ children }) => {
         savedUsersNames,
         userData,
         setUserData,
-        isBlueTheme,
-        setIsBlueTheme,
     };
 
     return (
