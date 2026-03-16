@@ -1,11 +1,12 @@
 import MyHeader from "../components/UI/Headers/MyHeader";
 import {Link, Navigate, Route, Routes} from "react-router-dom";
-import {privateRoutes, publicRoutes} from "../router/router";
+import {privateRoutes, publicRoutes} from "../router/routers";
 import '../styles/AppRouter.css'
 import React, {useContext, useState} from "react";
 import Context from "../index";
 import MyButton from "./UI/MyButton/MyButton";
 import MyModal from "./UI/modal/MyModal";
+import Text from "./UI/Text/Text";
 
 function AppRouter() {
     const {isUserLoggedIn, setUserLoggedIn} = useContext(Context)
@@ -51,19 +52,23 @@ function AppRouter() {
                 <div className = 'header'>
                     <div className='fieldLinks'>
                         <MyHeader/>
-                        {privateRoutes.map(route =>
-                            <div className='LinksButton' key={route.path}>
-                                <Link className='Links' to={route.path} key={route.path}>
-                                    {route.name}
-                                </Link>
-                            </div>
-                        )}
+                        {privateRoutes.map(route => {
+                            if (route.name) {
+                                return (
+                                    <div className='LinksButton' key={route.path}>
+                                        <Link className='Links' to={route.path} key={route.path}>
+                                            {route.name}
+                                        </Link>
+                                    </div>
+                                )
+                            }
+                        })}
                         <MyButton btnName='Log Out' callback={() => setVisibleLogOutModal(true)} />
                         <MyModal
                             setVisible = {setVisibleLogOutModal}
                             visible = {isVisibleLogOutModal}
                             children = {[
-                                <p key='Are you sure to log out'>Are you sure to log out</p>,
+                                <Text text='Are you sure to log out' key='Are you sure to log out'/>,
                                 <MyButton key={'Yes I`m sure'} btnName={'Yes I`m sure'} callback={ () => {
                                     setUserLoggedIn(false)
                                     setVisibleLogOutModal(false)

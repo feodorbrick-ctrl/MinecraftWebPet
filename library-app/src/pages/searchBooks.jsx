@@ -3,11 +3,11 @@ import MyInput from "../components/UI/MyInput/MyInput";
 import cl from '../styles/SearchBooks.module.css';
 import BookField from "../components/UI/bookField/bookField";
 import { booksArray } from "../router/bookArray";
+import Text from "../components/UI/Text/Text";
 
 const SearchBooks = () => {
     const [searchedBook, setSearchedBook] = useState('');
     const [books, setBooks] = useState(booksArray); // Просто копируем массив
-
     useEffect(() => {
        if (searchedBook.trim() === '') {
             setBooks(booksArray)
@@ -36,7 +36,7 @@ const SearchBooks = () => {
                         />
                     ))
                 ) : (
-                    <p>Книги не найдены</p>
+                    <Text text='Book`s not found' />
                 )}
             </div>
         </div>
