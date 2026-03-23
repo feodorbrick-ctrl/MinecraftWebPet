@@ -1,0 +1,30 @@
+.commentField {
+    margin: 5px;
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.commentInfo {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.likesField {
+    margin: 0 10px;
+    border: 3px solid rgba(100,100,255,0.45);
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+}
+
+.ratingField {
+    border: 3px solid rgba(100,100,255,0.45);
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+}
+
+/*background: rgba(0,0,100,0.5);*/
+/*background-color: rgba(100,100,255,0.75);*/

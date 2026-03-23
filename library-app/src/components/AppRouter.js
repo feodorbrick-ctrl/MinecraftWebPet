@@ -15,6 +15,7 @@ function AppRouter() {
     if (!isUserLoggedIn) {
         return (
             <div className="App">
+                <br/>
                 <div className="container">
                     <Routes>
                         {publicRoutes.map(route =>
@@ -41,6 +42,7 @@ function AppRouter() {
     } else {
         return (
             <div className="App">
+                <br/>
                 <div className="container">
                     <Routes>
                         {privateRoutes.map(route =>

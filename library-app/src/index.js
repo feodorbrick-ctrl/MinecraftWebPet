@@ -12,11 +12,11 @@ const ContextProvider = ({ children }) => {
         password: '',
     });
     const [bookInfo, setBookInfo] = useState({
-        bookName: '',
-        bookAuthor: '',
-        bookDescription: '',
-        bookAnalysis: 0,
-        bookText: '',
+        bookName: 'book is not switch',
+        bookAuthor: 'book is not switch',
+        bookDescription: 'book is not switch',
+        bookText: 'book text',
+        bookRating: 'book rating',
     })
 
     let savedUsersPassword = []
