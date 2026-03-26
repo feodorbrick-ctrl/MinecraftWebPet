@@ -36,6 +36,7 @@ const BookInformation = () => {
             }}/>
             <Text text={'rating: ' + bookInfo.bookRating} fontWeight="500"/>
             <Text text={bookInfo.bookDescription} fontWeight={300}/>
+            <Text text={bookInfo.bookGenre} fontWeight='200'/>
             <Text text = {bookInfo.bookName} />
             <MyButton btnName='Back' callback={() => navigate('/books')}/>
         </div>
