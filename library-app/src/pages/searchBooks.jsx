@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import MyInput from "../components/UI/MyInput/MyInput";
 import cl from '../styles/SearchBooks.module.css';
 import BookField from "../components/UI/bookField/bookField";
@@ -6,10 +6,13 @@ import { booksArray } from "../router/bookArray";
 import Text from "../components/UI/Text/Text";
 import MarginOfHeader from "../components/UI/MarginOfHeader/MarginOfHeader";
 import Select from "../components/UI/MySelect/Select";
+import Context from "../index";
 
 const SearchBooks = () => {
+    const {switchedGenre, setSwitchedGenre} = useContext(Context);
     const [searchedBook, setSearchedBook] = useState('');
     const [books, setBooks] = useState(booksArray); // Просто копируем массив
+
     useEffect(() => {
        if (searchedBook.trim() === '') {
             setBooks(booksArray)
@@ -18,13 +21,13 @@ const SearchBooks = () => {
        }
     }, [searchedBook]);
 
-    function onChangeGenre (e) {
-        if (e !== 'all') {
-            setBooks(booksArray.filter((book) => book.genre === e));
+    useEffect(() => {
+        if (switchedGenre !== 'all') {
+            setBooks(booksArray.filter((book) => book.genre === switchedGenre));
         } else {
             setBooks(booksArray)
         }
-    }
+    },[switchedGenre]);
 
     return (
         <div className={cl.backgroundListOfBooks}>
@@ -39,13 +42,14 @@ const SearchBooks = () => {
             <Text text={'all books: ' + books.length} fontWeight="bold" />
             <Select
                 key='Genres'
+                value = {switchedGenre}
                 nameSelect='Gernes'
                 idSelect='GernesSelect'
                 options={[
                     {value: 'all', name: 'All'},
                     ...new Map(booksArray.map(book => [book.genre, {value: book.genre, name: book.genre}])).values()
                 ]}
-                onChange={(e) => onChangeGenre(e.target.value)}
+                onChange={(e) => setSwitchedGenre(e.target.value)}
             />
             <MarginOfHeader/>
             <div>

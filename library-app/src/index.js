@@ -19,7 +19,7 @@ const ContextProvider = ({ children }) => {
         bookRating: 'book rating',
         bookGenre: 'book genre',
     })
-
+    const [switchedGenre, setSwitchedGenre] = useState('all');
     let savedUsersPassword = []
     let savedUsersNames = []
 
@@ -32,6 +32,8 @@ const ContextProvider = ({ children }) => {
         setUserData,
         bookInfo,
         setBookInfo,
+        switchedGenre,
+        setSwitchedGenre,
     };
 
     return (
