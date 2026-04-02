@@ -11,6 +11,7 @@ const ContextProvider = ({ children }) => {
         userName: '',
         password: '',
     });
+    const [myBooks, setMyBooks] = useState([]);
     const [bookInfo, setBookInfo] = useState({
         bookName: 'book is not switch',
         authorBook: 'book is not switch',
@@ -34,6 +35,8 @@ const ContextProvider = ({ children }) => {
         setBookInfo,
         switchedGenre,
         setSwitchedGenre,
+        myBooks,
+        setMyBooks,
     };
 
     return (
