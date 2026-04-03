@@ -6,11 +6,14 @@ import Text from "../components/UI/Text/Text";
 import Select from "../components/UI/MySelect/Select";
 import MarginOfHeader from "../components/UI/MarginOfHeader/MarginOfHeader";
 import BookField from "../components/UI/bookField/bookField";
+import MyButton from "../components/UI/MyButton/MyButton";
+import {useNavigate} from "react-router-dom";
 
 const MyBooks = () => {
     const {switchedGenre, setSwitchedGenre, myBooks} = useContext(Context);
     const [searchedBook, setSearchedBook] = useState('');
     const [books, setBooks] = useState(myBooks); // Просто копируем массив
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (searchedBook.trim() === '') {
@@ -30,6 +33,7 @@ const MyBooks = () => {
 
     return (
         <div className={cl.backgroundListOfBooks}>
+            <MyButton btnName='Back' callback={() => navigate('/home')} />
             <MyInput
                 placeholder='Search my books...'
                 value={searchedBook}
