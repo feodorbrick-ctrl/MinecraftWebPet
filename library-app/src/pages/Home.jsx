@@ -16,6 +16,8 @@ const Home = () => {
             <br/>
             <BooksGenresSwitchField genres={[...new Map(booksArray.map(book => [book.genre, {name: book.genre}])).values()]}/>
             <MyButton btnName='My Books' callback={() => navigate('/home/myBooks')} className={cl.btnMyBooks}/>
+            <br/>
+            <MyButton btnName='Settings' callback={() => navigate('/home/enterThePassword')}/>
         </div>
     );
 };
