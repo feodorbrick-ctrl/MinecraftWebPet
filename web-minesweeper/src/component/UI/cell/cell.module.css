@@ -1,7 +1,8 @@
 .cell {
-    display: block;
+    display: none;
     width: 50px;
     height: 50px;
+    margin: 0;
 }
 
 .cell:hover {
@@ -11,7 +12,7 @@
 
 .numberField {
     z-index: 0;
-    margin: 1px;
+    margin: 0;
     padding: 0;
     background-color: #757575;
     border: 5px solid #333333;

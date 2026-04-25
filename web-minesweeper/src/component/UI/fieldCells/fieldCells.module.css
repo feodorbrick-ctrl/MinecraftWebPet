@@ -1,0 +1,11 @@
+.playField {
+    padding: 50px;
+    background-color: #757575;
+    border-bottom: 5px #333333 solid;
+    border-right: 5px #333333 solid;
+    border-left: 5px lightgray solid;
+    border-top: 5px lightgray solid;
+    width: 420px;
+    height: 500px;
+    position: relative;
+}

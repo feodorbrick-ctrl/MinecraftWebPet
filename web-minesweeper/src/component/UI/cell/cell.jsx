@@ -43,7 +43,7 @@ const Cell = ({top, left, cellChildren}) => {
                 }
             </div>
             <img
-                style={{top: top, left: left,position: 'absolute'}}
+                style={{top: top - 1, left: left - 1, position: 'absolute'}}
                 onClick={(e) => {
                     if (canUserPlay) {
                         e.currentTarget.style.display = 'none';
