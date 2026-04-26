@@ -12,7 +12,7 @@ import numberSeven from '../../../Images/numberSeven.png'
 import numberEight from '../../../Images/numberEight.png'
 import Bomb from '../../../Images/bomb.png'
 
-const Cell = ({top, left, cellChildren}) => {
+const Cell = ({top, left, i, cellChildren}) => {
     const {canUserPlay, setCanUserPlay} = useContext(Context);
     switch (cellChildren) {
         case 1: cellChildren = numberOne;
@@ -41,6 +41,7 @@ const Cell = ({top, left, cellChildren}) => {
                 {cellChildren &&
                     <img src={cellChildren} alt={cellChildren} className={cl.img}/>
                 }
+                <h1 style={{position: 'fixed', zIndex: 100, top: top + 185, left: left + 330}}>{i}</h1>
             </div>
             <img
                 style={{top: top - 1, left: left - 1, position: 'absolute'}}
